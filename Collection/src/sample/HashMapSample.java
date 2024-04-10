@@ -8,39 +8,53 @@ public class HashMapSample {
     public static void main(String[] args) {
         Map<String, String> members = new HashMap<>();
         
-        //HasyMapにキー値を追加
+        //HashMapにキー値を追加
         members.put("GK","前川");
         members.put("DF","菅原");
         members.put("MF","守田");
         members.put("FW","上田");
         
+        System.out.println("");
+        
         //要素の取得
         String fw = members.get("FW");
         System.out.println("FWは：" +fw);
         
+        System.out.println("");
+        
         //要素の変更
         members.put("FW","細谷"); //FW要素を置換"
         System.out.println("1番目の要素（置換後）：" +members.get("FW"));
+        
+        System.out.println("");
         
         //要素の削除
         System.out.println("GKの要素（削除前）：" +members.get("GK"));
         members.remove("GK"); //ＧＫ要素を削除
         System.out.println("GKの要素（削除後）：" +members.get("GK"));
         
+        System.out.println("");
+        
+        //forによる取得
+        
+        
         //拡張forループによる取得：entrySet
         for(Map.Entry<String, String> entry : members.entrySet()) {
             System.out.println("entrySetキー：" +entry.getKey()+ "、値：" +entry.getValue());
         }
+        System.out.println("");
         
         //拡張forループによる取得：keySet
         for(String key : members.keySet()) {
             System.out.println("keySetキー：" +key +"、値："+members.get(key));
         }
+        System.out.println("");
         
         //拡張forループによる取得：values
         for(String value:members.values()) {
             System.out.println("values 値："+value);
         }
+        System.out.println("");
         
         //サイズの取得
         int size = members.size();//Mapのサイズを取得
